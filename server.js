@@ -31,10 +31,10 @@ var server = http.createServer(function(request, response){
     string = string.replace('{{page1}}', `<ul id="xxx">${result}</ul>`)
     response.write(string)
     response.end()
-  } else if(path === '/main.js'){
+  } else if(path === '/mian.js'){
     response.statusCode = 200
     response.setHeader('Content-Type', 'text/javascript;charset=utf-8')
-    response.write(fs.readFileSync('public/main.js'))
+    response.write(fs.readFileSync('public/mian.js'))
     response.end()
   } else if(path === '/style.css' || path === '/2.css'){
     response.statusCode = 200
