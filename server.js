@@ -10,7 +10,7 @@ if(!port){
 
 var server = http.createServer(function(request, response){
   var parsedUrl = url.parse(request.url, true)
-  var pathWithQuery = request.url 
+  var pathWithQuery = request.url
   var queryString = ''
   if(pathWithQuery.indexOf('?') >= 0){ queryString = pathWithQuery.substring(pathWithQuery.indexOf('?')) }
   var path = parsedUrl.pathname
@@ -31,10 +31,10 @@ var server = http.createServer(function(request, response){
     string = string.replace('{{page1}}', `<ul id="xxx">${result}</ul>`)
     response.write(string)
     response.end()
-  } else if(path === '/mian.js'){
+  } else if(path === '/main.js'){
     response.statusCode = 200
     response.setHeader('Content-Type', 'text/javascript;charset=utf-8')
-    response.write(fs.readFileSync('public/mian.js'))
+    response.write(fs.readFileSync('public/main.js'))
     response.end()
   } else if(path === '/style.css' || path === '/2.css'){
     response.statusCode = 200
