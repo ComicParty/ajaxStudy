@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标侧键</title>
+</head>
+<body>
+<h1>鼠标侧键示例</h1>
+
+<script>
+  document.addEventListener("mousedown", function(event) {
+    if (event.button === 3) {
+      // 第四个侧键被点击
+      console.log("第四个侧键被点击");
+    } else if (event.button === 4) {
+      // 第五个侧键被点击
+      console.log("第五个侧键被点击");
+    }
+  });
+</script>
+</body>
+</html>
